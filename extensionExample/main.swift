@@ -8,5 +8,26 @@
 
 import Foundation
 
-print("Hello, World!")
+var obj = MyClass()
 
+obj.Method1()
+obj.Method2()
+
+extension MyClass{
+    func NewMethod()  {
+        print("New Method Called!")
+    }
+}
+
+obj.NewMethod()
+
+extension Int{
+
+    mutating func sum(a:Int) {
+        self += a
+    }
+}
+
+var varInt:Int = 10
+varInt.sum(a: 44)
+print(varInt)
